@@ -27,3 +27,13 @@ Conseil: Avant de mettre en place l'image de Raspbian sur la carte SD, il est pr
 Sur *Linux* `dd if=/dev/zero of=/dev/sdX bs=4m` (status=progress pour l'état d'avancement)
 
 Sur *Mac OS* `diskutil zeroDisk /dev/rdiskX`
+
+### Raspbian sur Raspberry ###
+
+1. Télécharger l'image de Raspbian sur le site officiel de la fondation, [ici](https://www.raspberrypi.org/downloads/raspbian/)
+
+2. Dezipper le fichier: `unzip 2018-04-18-raspbian-stretch.zip`
+
+3. Ecrire l'image sur votre carte SD: `dd if=2018-04-18-raspbian-stretch.img of=/dev/disk2 bs=4m && sudo sync`
+
+4. Mettre votre carte SD et brancher l'alimentation sur votre Raspberry, votre Raspbian est prêt à l'utilisation
