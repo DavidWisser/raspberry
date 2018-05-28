@@ -37,3 +37,7 @@ Sur *Mac OS* `diskutil zeroDisk /dev/rdiskX`
 3. Ecrire l'image sur votre carte SD: `dd if=2018-04-18-raspbian-stretch.img of=/dev/disk2 bs=4m && sudo sync`
 
 4. Mettre votre carte SD et brancher l'alimentation sur votre Raspberry, votre Raspbian est prêt à l'utilisation
+
+### Ubuntu sur PC ###
+
+__Note:__ De nombreux articles décrivent la manière de procéder pour la mise en place de Ubuntu sur PC. Cette étape ne sera donc pas traitée.
