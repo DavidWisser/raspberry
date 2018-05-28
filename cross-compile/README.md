@@ -9,3 +9,13 @@ La cross compilation à comme but de pouvoir utiliser les ressources d'une machi
 Alors pourquoi ne pas prendre un PC bien plus puissant et compiler le tout en moins de l'heure sur des machines d'aujourd'hui.
 
 C'est ce que je vous propose de découvrir ici !!!
+
+__Note:__ La suite du document est basé sur les écrits présentent sur la page [http://wiki.qt.io/RaspberryPi2EGLFS](http://wiki.qt.io/RaspberryPi2EGLFS) 
+
+## Configuration ##
+
+Machine principale Ubuntu 18.04 LTS ( [Site officiel](https://www.ubuntu.com/) )
+
+Raspberry Pi modèle 3 B+ avec Rasbian Stretch édition Desktop du 2018-04-18 ( [Site officiel](https://www.raspberrypi.org/) )
+
+Framework Qt 5.11 et Qt Creator 4.6.1
