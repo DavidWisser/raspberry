@@ -19,3 +19,11 @@ Machine principale Ubuntu 18.04 LTS ( [Site officiel](https://www.ubuntu.com/) )
 Raspberry Pi modèle 3 B+ avec Rasbian Stretch édition Desktop du 2018-04-18 ( [Site officiel](https://www.raspberrypi.org/) )
 
 Framework Qt 5.11 et Qt Creator 4.6.1
+
+## Installation ##
+
+Conseil: Avant de mettre en place l'image de Raspbian sur la carte SD, il est préfèrable de l'effacer par remplissage de zéro.
+
+Sur *Linux* `dd if=/dev/zero of=/dev/sdX bs=4m` (status=progress pour l'état d'avancement)
+
+Sur *Mac OS* `diskutil zeroDisk /dev/rdiskX`
