@@ -41,3 +41,27 @@ Sur *Mac OS* `diskutil zeroDisk /dev/rdiskX`
 ### Ubuntu sur PC ###
 
 __Note:__ De nombreux articles décrivent la manière de procéder pour la mise en place de Ubuntu sur PC. Cette étape ne sera donc pas traitée.
+
+### Configuration du Raspberry ###
+
+1. Configurer le réseau Wifi ou Ethernet (au choix), afin qu'il soit sur votre réseau local
+
+__Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la connexion SSH entre le Raspberry et le PC
+
+2. Ouvrir un terminal et lancer la commande `sudo raspi-config`
+
+3. Entrer dans le menu "Change User Password" afin de définir un nouveau mot de passe
+
+4. Entrer dans le menu "Network Options" puis "Hostname" et redéfinir le nom d'hôte. Pratique si plusieurs Raspberry en réseau ^^
+
+5. Entrer dans le menu "Boot Options" puis "Desktop / CLI" et définir "Console" (choix personnel de ne pas utiliser l'environnement graphique)
+
+6. Entrer dans le menu "Interfacing Options" puis "SSH" puis "Yes"
+
+7. Entrer dans le meun "Advanced Options" puis "Memory Split" et taper 256
+
+8. Quitter la configuration par "Finish" et rebooter le Raspberry en répondant "Yes" à la question
+
+9. Attendre le redémarrage du Raspberry
+
+10. Valider la connexion SSH vers le Raspberry avec la commande `ssh pi@hostname 'uname -srm'` et en retour la réponse `Linux 4.14.34-v7+ armv7l`
