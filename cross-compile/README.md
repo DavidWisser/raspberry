@@ -71,12 +71,12 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 1. Mettre à jour Raspbian avec la commande `sudo rpi-update` et un reboot `sudo reboot`
 
 2. Installation des librairies nécessaire à l'utilisation de Qt et pour la compilation du framework
-    `sudo vim /etc/apt/sources.list` et décommenter la ligne **deb-src**
-    `sudo apt update`
-    `sudo apt build-dep qt4-x11`
-    `sudo apt build-dep libqt5gui5`
-    `sudo apt libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
+    - `sudo vim /etc/apt/sources.list` et décommenter la ligne **deb-src**
+    - `sudo apt update`
+    - `sudo apt build-dep qt4-x11`
+    - `sudo apt build-dep libqt5gui5`
+    - `sudo apt libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
 
 3. Préparation du répertoire cible
-    `sudo mkdir /usr/local/qt5pi`
-    `sudo chown pi:pi /usr/local/qt5pi`
+    - `sudo mkdir /usr/local/qt5pi`
+    - `sudo chown pi:pi /usr/local/qt5pi`
