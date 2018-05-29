@@ -75,7 +75,7 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
     - `sudo apt update`
     - `sudo apt build-dep qt4-x11`
     - `sudo apt build-dep libqt5gui5`
-    - `sudo apt libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
+    - `sudo apt install libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
 
 3. Préparation du répertoire cible
     - `sudo mkdir /usr/local/qt5pi`
