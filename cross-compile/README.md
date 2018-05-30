@@ -71,12 +71,28 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 1. Mettre à jour Raspbian avec la commande `sudo rpi-update` et un reboot `sudo reboot`
 
 2. Installation des librairies nécessaire à l'utilisation de Qt et pour la compilation du framework
-    - `sudo vim /etc/apt/sources.list` et décommenter la ligne **deb-src**
-    - `sudo apt update`
-    - `sudo apt build-dep qt4-x11`
-    - `sudo apt build-dep libqt5gui5`
-    - `sudo apt install libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
+- `sudo vim /etc/apt/sources.list` et décommenter la ligne **deb-src**
+- `sudo apt update`
+- `sudo apt build-dep qt4-x11`
+- `sudo apt build-dep libqt5gui5`
+- `sudo apt install libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0`
 
 3. Préparation du répertoire cible
-    - `sudo mkdir /usr/local/qt5pi`
-    - `sudo chown pi:pi /usr/local/qt5pi`
+- `sudo mkdir /usr/local/qt5pi`
+- `sudo chown pi:pi /usr/local/qt5pi`
+
+### Configuration de Ubuntu ###
+
+1. Installation du compilateur gcc avec la commande `sudo apt install gcc`
+
+2. Installation du package OpenGL API -- GLX avec la commande `sudo apt install libgl1-mesa-dev`
+
+3. Télécharger l'installateur de Qt, puis donner les droits d'execution et lancer le
+- `chmod 777 qt-unified-linux-x64-3.0.4-online.run`
+- `./qt-unified-linux-x64-3.0.4-online.run`
+
+4. Sélectionner les options suivantes lors de l'installation de Qt
+![Qt installation](https://github.com/DavidWisser/raspberry/tree/doc/cross-compile/img/qt_install.png)
+
+5. Lancer Qt Creator afin de valider l'installation et la compilation d'une première fenêtre
+![Qt Window](https://github.com/DavidWisser/raspberry/tree/doc/cross-compile/img/qt_window.png)
