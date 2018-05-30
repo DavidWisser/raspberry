@@ -96,3 +96,21 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 
 5. Lancer Qt Creator afin de valider l'installation et la compilation d'une première fenêtre
 ![Qt Window](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/qt_window.png)
+
+6. Création du répertoire de travail et mise en place de la tool-chain
+    - `mkdir ~/raspi`
+    - `cd ~/raspi`
+    - `git clone https://github.com/raspberrypi/tools`
+
+7. Création du répertoire sysroot et utilisation de rsync afin de parfaitement synchroniser l'ensembles des fichiers nécessaires à la cross-compilation
+    - `mkdir sysroot sysroot/usr sysroot/opt`
+    - `rsync -avz pi@raspberrypi.local:/lib sysroot`
+    - `rsync -avz pi@raspberrypi.local:/usr/include sysroot/usr`
+    - `rsync -avz pi@raspberrypi.local:/usr/lib sysroot/usr`
+    - `rsync -avz pi@raspberrypi.local:/opt/vc sysroot/opt`
+
+8. Création des liens symboliques avec le répertoire sysroot
+    - `wget https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/script/sysroot-relativelinks.py`
+    - `chmod +x sysroot-relativelinks.py`
+    - `./sysroot-relativelinks.py sysroot`
+
