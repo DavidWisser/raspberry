@@ -92,7 +92,7 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 - `./qt-unified-linux-x64-3.0.4-online.run`
 
 4. Sélectionner les options suivantes lors de l'installation de Qt
-![Qt installation](https://github.com/DavidWisser/raspberry/tree/doc/cross-compile/img/qt_install.png)
+![Qt installation](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/qt_install.png)
 
 5. Lancer Qt Creator afin de valider l'installation et la compilation d'une première fenêtre
-![Qt Window](https://github.com/DavidWisser/raspberry/tree/doc/cross-compile/img/qt_window.png)
+![Qt Window](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/qt_window.png)
