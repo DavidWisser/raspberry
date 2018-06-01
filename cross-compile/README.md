@@ -146,3 +146,19 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 	- `export QT_QPA_EGLFS_PHYSICAL_WIDTH=528`
 	- `export QT_QPA_EGLFS_PHYSICAL_HEIGHT=295`
 	- `export QT_QPA_FONTDIR=/usr/share/fonts/truetype/dejavu`
+	
+### Execution d'un programme Qt sur Raspberry ###
+
+Nous voilà au bout de nos effort, nous sommes enfin prêt a executer notre logiciel sur le Raspberry.
+
+1. Compiler un projet disponible en exemple
+	- `cd qtbase/examples/opengl/qopenglwidget`
+	- `~/raspi/qt5/bin/qmake`
+	- `make -j 8`
+
+2. Transférer le projet sur le Raspberry
+	- `scp qopenglwidget pi@hostname:/home/pi`
+
+3. Lancer le programme
+	- `ssh pi@hostname`
+	- `./qopenglwidget`
