@@ -1,6 +1,6 @@
 #  Cross-compilation #
 
-![Rasperry Pi logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_raspberrypi.png) ![Qt logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_qti.png)
+![Rasperry Pi logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_raspberrypi.png) ![Qt logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_qt.png)
 
 ## Introduction ##
 
