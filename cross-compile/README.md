@@ -1,4 +1,6 @@
-#  Cross-compilation ##
+#  Cross-compilation #
+
+![Rasperry Pi logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_raspberrypi.png) ![Qt logo](https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/img/logo_qti.png)
 
 ## Introduction ##
 
@@ -113,4 +115,3 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
     - `wget https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/script/sysroot-relativelinks.py`
     - `chmod +x sysroot-relativelinks.py`
     - `./sysroot-relativelinks.py sysroot`
-
