@@ -131,3 +131,18 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 
 4. Deploiment Qt sur le Raspberry
 	- `rsync -avz qt5pi pi@hostname:/usr/local`
+
+5. Edition des liens symboliques pour trouver les librairies Qt
+	- `echo /usr/local/qt5pi/lib | sudo tee /etc/ld.so.conf.d/qt5pi.conf`
+	- `sudo ldconfig`
+	- `sudo mv /usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0 /usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0_backup`
+	- `sudo mv /usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0 /usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0_backup`
+	- `sudo ln -s /opt/vc/lib/libEGL.so /usr/lib/arm-linux-gnueabihf/libEGL.so.1.0.0`
+	- `sudo ln -s /opt/vc/lib/libGLESv2.so /usr/lib/arm-linux-gnueabihf/libGLESv2.so.2.0.0`
+	- `sudo ln -s /opt/vc/lib/libEGL.so /opt/vc/lib/libEGL.so.1`
+	- `sudo ln -s /opt/vc/lib/libGLESv2.so /opt/vc/lib/libGLESv2.so.2`
+
+6. Exporter les variables pour la configuration de l'écran et la police d'écriture, en rajoutant dans votre fichier *.bashrc*. __Note:__ Adapter les valeurs en fonction de votre écran. Valeur en mm
+	- `export QT_QPA_EGLFS_PHYSICAL_WIDTH=528`
+	- `export QT_QPA_EGLFS_PHYSICAL_HEIGHT=295`
+	- `export QT_QPA_FONTDIR=/usr/share/fonts/truetype/dejavu`
