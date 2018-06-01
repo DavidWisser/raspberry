@@ -115,3 +115,19 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
     - `wget https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/script/sysroot-relativelinks.py`
     - `chmod +x sysroot-relativelinks.py`
     - `./sysroot-relativelinks.py sysroot`
+
+### Compilation de Qt ###
+
+1. Récupérer les sources depuis le dépôt Git officiel de Qt
+	- `git clone git://code.qt.io/qt/qtbase.git -b 5.11`
+
+2. Configurer pour la préparation de la compilation
+	- `cd qtbase`
+	- `./configure -no-use-gold-linker -release -opengl es2 -device linux-rasp-pi3-g++ -device-option CROSS_COMPILE=~/raspi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin/arm-linux-gnueabihf- -sysroot ~/raspi/sysroot -opensource -confirm-license -make libs -prefix /usr/local/qt5pi -extprefix ~/raspi/qt5pi -hostprefix ~/raspi/qt5 -v`
+
+3. Compiler en ajustant le nombre de processeur de votre machine avec l'option -j n (nombre de processus en parallèle)
+	- `make -j 8`
+	- `make install`
+
+4. Deploiment Qt sur le Raspberry
+	- `rsync -avz qt5pi pi@hostname:/usr/local`
