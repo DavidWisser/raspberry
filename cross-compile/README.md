@@ -106,10 +106,10 @@ __Note:__ Afin de faciliter les prochaines étapes, nous allons configurer la co
 
 7. Création du répertoire sysroot et utilisation de rsync afin de parfaitement synchroniser l'ensembles des fichiers nécessaires à la cross-compilation
     - `mkdir sysroot sysroot/usr sysroot/opt`
-    - `rsync -avz pi@raspberrypi.local:/lib sysroot`
-    - `rsync -avz pi@raspberrypi.local:/usr/include sysroot/usr`
-    - `rsync -avz pi@raspberrypi.local:/usr/lib sysroot/usr`
-    - `rsync -avz pi@raspberrypi.local:/opt/vc sysroot/opt`
+    - `rsync -avz pi@hostname:/lib sysroot`
+    - `rsync -avz pi@hostname:/usr/include sysroot/usr`
+    - `rsync -avz pi@hostname:/usr/lib sysroot/usr`
+    - `rsync -avz pi@hostname:/opt/vc sysroot/opt`
 
 8. Création des liens symboliques avec le répertoire sysroot
     - `wget https://raw.githubusercontent.com/DavidWisser/raspberry/doc/cross-compile/script/sysroot-relativelinks.py`
